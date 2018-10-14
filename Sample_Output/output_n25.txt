@@ -1,0 +1,88 @@
+[1, 2, 11, 1]  -> BTC -> DOGE -> 8BIT -> BTC  log-gain-score: 0.005311294385117904
+[1, 3, 2, 11, 1]  -> BTC -> LTC -> DOGE -> 8BIT -> BTC  log-gain-score: 0.00925497251959051
+[1, 3, 5, 2, 11, 1]  -> BTC -> LTC -> USDT -> DOGE -> 8BIT -> BTC  log-gain-score: 0.004040112160348386
+[1, 5, 2, 11, 1]  -> BTC -> USDT -> DOGE -> 8BIT -> BTC  log-gain-score: 0.002477986723954828
+[1, 16, 2, 11, 1]  -> BTC -> ADA -> DOGE -> 8BIT -> BTC  log-gain-score: 0.0031593493260118066
+[1, 24, 2, 11, 1]  -> BTC -> ANON -> DOGE -> 8BIT -> BTC  log-gain-score: 0.0010260854674903896
+[2, 11, 1, 2]  -> DOGE -> 8BIT -> BTC -> DOGE  log-gain-score: 0.005311294385117904
+[2, 11, 1, 3, 2]  -> DOGE -> 8BIT -> BTC -> LTC -> DOGE  log-gain-score: 0.009254972519592286
+[2, 11, 1, 3, 5, 2]  -> DOGE -> 8BIT -> BTC -> LTC -> USDT -> DOGE  log-gain-score: 0.004040112160349274
+[2, 11, 1, 5, 2]  -> DOGE -> 8BIT -> BTC -> USDT -> DOGE  log-gain-score: 0.00247798672395394
+[2, 11, 1, 16, 2]  -> DOGE -> 8BIT -> BTC -> ADA -> DOGE  log-gain-score: 0.0031593493260118066
+[2, 11, 1, 24, 2]  -> DOGE -> 8BIT -> BTC -> ANON -> DOGE  log-gain-score: 0.0010260854674903896
+[1, 2, 11, 1]  -> BTC -> DOGE -> 8BIT -> BTC  log-gain-score: 0.005311294385117904
+[1, 5, 2, 11, 1]  -> BTC -> USDT -> DOGE -> 8BIT -> BTC  log-gain-score: 0.002477986723954828
+[1, 16, 2, 11, 1]  -> BTC -> ADA -> DOGE -> 8BIT -> BTC  log-gain-score: 0.0031593493260118066
+[1, 24, 2, 11, 1]  -> BTC -> ANON -> DOGE -> 8BIT -> BTC  log-gain-score: 0.0010260854674903896
+[2, 11, 1, 2]  -> DOGE -> 8BIT -> BTC -> DOGE  log-gain-score: 0.005311294385117904
+[3, 2, 11, 1, 3]  -> LTC -> DOGE -> 8BIT -> BTC -> LTC  log-gain-score: 0.00925497251959051
+[2, 11, 1, 5, 2]  -> DOGE -> 8BIT -> BTC -> USDT -> DOGE  log-gain-score: 0.00247798672395394
+[2, 11, 1, 16, 2]  -> DOGE -> 8BIT -> BTC -> ADA -> DOGE  log-gain-score: 0.0031593493260118066
+[2, 11, 1, 24, 2]  -> DOGE -> 8BIT -> BTC -> ANON -> DOGE  log-gain-score: 0.0010260854674903896
+[1, 2, 11, 1]  -> BTC -> DOGE -> 8BIT -> BTC  log-gain-score: 0.005311294385117904
+[1, 5, 2, 11, 1]  -> BTC -> USDT -> DOGE -> 8BIT -> BTC  log-gain-score: 0.002477986723954828
+[1, 16, 2, 11, 1]  -> BTC -> ADA -> DOGE -> 8BIT -> BTC  log-gain-score: 0.0031593493260118066
+[1, 24, 2, 11, 1]  -> BTC -> ANON -> DOGE -> 8BIT -> BTC  log-gain-score: 0.0010260854674903896
+[2, 11, 1, 2]  -> DOGE -> 8BIT -> BTC -> DOGE  log-gain-score: 0.005311294385117904
+[2, 11, 1, 5, 2]  -> DOGE -> 8BIT -> BTC -> USDT -> DOGE  log-gain-score: 0.00247798672395394
+[2, 11, 1, 16, 2]  -> DOGE -> 8BIT -> BTC -> ADA -> DOGE  log-gain-score: 0.0031593493260118066
+[2, 11, 1, 24, 2]  -> DOGE -> 8BIT -> BTC -> ANON -> DOGE  log-gain-score: 0.0010260854674903896
+[1, 2, 11, 1]  -> BTC -> DOGE -> 8BIT -> BTC  log-gain-score: 0.005311294385117904
+[1, 16, 2, 11, 1]  -> BTC -> ADA -> DOGE -> 8BIT -> BTC  log-gain-score: 0.0031593493260118066
+[1, 24, 2, 11, 1]  -> BTC -> ANON -> DOGE -> 8BIT -> BTC  log-gain-score: 0.0010260854674903896
+[2, 11, 1, 2]  -> DOGE -> 8BIT -> BTC -> DOGE  log-gain-score: 0.005311294385117904
+[5, 2, 11, 1, 5]  -> USDT -> DOGE -> 8BIT -> BTC -> USDT  log-gain-score: 0.0024779867239530518
+[2, 11, 1, 16, 2]  -> DOGE -> 8BIT -> BTC -> ADA -> DOGE  log-gain-score: 0.0031593493260118066
+[2, 11, 1, 24, 2]  -> DOGE -> 8BIT -> BTC -> ANON -> DOGE  log-gain-score: 0.0010260854674903896
+[1, 2, 11, 1]  -> BTC -> DOGE -> 8BIT -> BTC  log-gain-score: 0.005311294385117904
+[1, 16, 2, 11, 1]  -> BTC -> ADA -> DOGE -> 8BIT -> BTC  log-gain-score: 0.0031593493260118066
+[1, 24, 2, 11, 1]  -> BTC -> ANON -> DOGE -> 8BIT -> BTC  log-gain-score: 0.0010260854674903896
+[2, 11, 1, 2]  -> DOGE -> 8BIT -> BTC -> DOGE  log-gain-score: 0.005311294385117904
+[3, 5, 2, 11, 1, 3]  -> LTC -> USDT -> DOGE -> 8BIT -> BTC -> LTC  log-gain-score: 0.004040112160348386
+[5, 2, 11, 1, 5]  -> USDT -> DOGE -> 8BIT -> BTC -> USDT  log-gain-score: 0.0024779867239530518
+[2, 11, 1, 16, 2]  -> DOGE -> 8BIT -> BTC -> ADA -> DOGE  log-gain-score: 0.0031593493260118066
+[2, 11, 1, 24, 2]  -> DOGE -> 8BIT -> BTC -> ANON -> DOGE  log-gain-score: 0.0010260854674903896
+[1, 2, 11, 1]  -> BTC -> DOGE -> 8BIT -> BTC  log-gain-score: 0.005311294385117904
+[1, 16, 2, 11, 1]  -> BTC -> ADA -> DOGE -> 8BIT -> BTC  log-gain-score: 0.0031593493260118066
+[1, 24, 2, 11, 1]  -> BTC -> ANON -> DOGE -> 8BIT -> BTC  log-gain-score: 0.0010260854674903896
+[2, 11, 1, 2]  -> DOGE -> 8BIT -> BTC -> DOGE  log-gain-score: 0.005311294385117904
+[2, 11, 1, 16, 2]  -> DOGE -> 8BIT -> BTC -> ADA -> DOGE  log-gain-score: 0.0031593493260118066
+[2, 11, 1, 24, 2]  -> DOGE -> 8BIT -> BTC -> ANON -> DOGE  log-gain-score: 0.0010260854674903896
+[2, 11, 1, 2]  -> DOGE -> 8BIT -> BTC -> DOGE  log-gain-score: 0.005311294385117904
+[2, 11, 1, 5, 2]  -> DOGE -> 8BIT -> BTC -> USDT -> DOGE  log-gain-score: 0.00247798672395394
+[2, 11, 1, 16, 2]  -> DOGE -> 8BIT -> BTC -> ADA -> DOGE  log-gain-score: 0.0031593493260118066
+[2, 11, 1, 24, 2]  -> DOGE -> 8BIT -> BTC -> ANON -> DOGE  log-gain-score: 0.0010260854674903896
+[2, 11, 1, 2]  -> DOGE -> 8BIT -> BTC -> DOGE  log-gain-score: 0.005311294385117904
+[2, 11, 1, 5, 2]  -> DOGE -> 8BIT -> BTC -> USDT -> DOGE  log-gain-score: 0.00247798672395394
+[2, 11, 1, 16, 2]  -> DOGE -> 8BIT -> BTC -> ADA -> DOGE  log-gain-score: 0.0031593493260118066
+[2, 11, 1, 24, 2]  -> DOGE -> 8BIT -> BTC -> ANON -> DOGE  log-gain-score: 0.0010260854674903896
+[11, 1, 2, 11]  -> 8BIT -> BTC -> DOGE -> 8BIT  log-gain-score: 0.005311294385117238
+[11, 1, 5, 2, 11]  -> 8BIT -> BTC -> USDT -> DOGE -> 8BIT  log-gain-score: 0.002477986723953274
+[11, 1, 16, 2, 11]  -> 8BIT -> BTC -> ADA -> DOGE -> 8BIT  log-gain-score: 0.0031593493260111405
+[11, 1, 24, 2, 11]  -> 8BIT -> BTC -> ANON -> DOGE -> 8BIT  log-gain-score: 0.0010260854674897235
+[1, 2, 11, 1]  -> BTC -> DOGE -> 8BIT -> BTC  log-gain-score: 0.005311294385117904
+[1, 5, 2, 11, 1]  -> BTC -> USDT -> DOGE -> 8BIT -> BTC  log-gain-score: 0.002477986723954828
+[1, 24, 2, 11, 1]  -> BTC -> ANON -> DOGE -> 8BIT -> BTC  log-gain-score: 0.0010260854674903896
+[2, 11, 1, 2]  -> DOGE -> 8BIT -> BTC -> DOGE  log-gain-score: 0.005311294385117904
+[2, 11, 1, 5, 2]  -> DOGE -> 8BIT -> BTC -> USDT -> DOGE  log-gain-score: 0.00247798672395394
+[16, 2, 11, 1, 16]  -> ADA -> DOGE -> 8BIT -> BTC -> ADA  log-gain-score: 0.0031593493260118066
+[2, 11, 1, 24, 2]  -> DOGE -> 8BIT -> BTC -> ANON -> DOGE  log-gain-score: 0.0010260854674903896
+[1, 2, 11, 1]  -> BTC -> DOGE -> 8BIT -> BTC  log-gain-score: 0.005311294385117904
+[1, 5, 2, 11, 1]  -> BTC -> USDT -> DOGE -> 8BIT -> BTC  log-gain-score: 0.002477986723954828
+[1, 16, 2, 11, 1]  -> BTC -> ADA -> DOGE -> 8BIT -> BTC  log-gain-score: 0.0031593493260118066
+[1, 24, 2, 11, 1]  -> BTC -> ANON -> DOGE -> 8BIT -> BTC  log-gain-score: 0.0010260854674903896
+[1, 2, 11, 1]  -> BTC -> DOGE -> 8BIT -> BTC  log-gain-score: 0.005311294385117904
+[1, 5, 2, 11, 1]  -> BTC -> USDT -> DOGE -> 8BIT -> BTC  log-gain-score: 0.002477986723954828
+[1, 16, 2, 11, 1]  -> BTC -> ADA -> DOGE -> 8BIT -> BTC  log-gain-score: 0.0031593493260118066
+[1, 24, 2, 11, 1]  -> BTC -> ANON -> DOGE -> 8BIT -> BTC  log-gain-score: 0.0010260854674903896
+[2, 11, 1, 2]  -> DOGE -> 8BIT -> BTC -> DOGE  log-gain-score: 0.005311294385117904
+[2, 11, 1, 5, 2]  -> DOGE -> 8BIT -> BTC -> USDT -> DOGE  log-gain-score: 0.00247798672395394
+[2, 11, 1, 16, 2]  -> DOGE -> 8BIT -> BTC -> ADA -> DOGE  log-gain-score: 0.0031593493260118066
+[2, 11, 1, 24, 2]  -> DOGE -> 8BIT -> BTC -> ANON -> DOGE  log-gain-score: 0.0010260854674903896
+[1, 2, 11, 1]  -> BTC -> DOGE -> 8BIT -> BTC  log-gain-score: 0.005311294385117904
+[1, 5, 2, 11, 1]  -> BTC -> USDT -> DOGE -> 8BIT -> BTC  log-gain-score: 0.002477986723954828
+[1, 16, 2, 11, 1]  -> BTC -> ADA -> DOGE -> 8BIT -> BTC  log-gain-score: 0.0031593493260118066
+[2, 11, 1, 2]  -> DOGE -> 8BIT -> BTC -> DOGE  log-gain-score: 0.005311294385117904
+[2, 11, 1, 5, 2]  -> DOGE -> 8BIT -> BTC -> USDT -> DOGE  log-gain-score: 0.00247798672395394
+[2, 11, 1, 16, 2]  -> DOGE -> 8BIT -> BTC -> ADA -> DOGE  log-gain-score: 0.0031593493260118066
+[24, 2, 11, 1, 24]  -> ANON -> DOGE -> 8BIT -> BTC -> ANON  log-gain-score: 0.0010260854674886133

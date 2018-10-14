@@ -1,0 +1,18 @@
+Example: 
+[1, 2, 11, 1]  -> BTC -> DOGE -> 8BIT -> BTC 
+Adjacency Matrix is (left - from) to (top - to)
+
+BTC -> DOGE 1204819.27710843
+DOGE -> 8BIT 0.13814902125252
+8BIT -> BTC 0.00000604
+
+Assume we start with 1BTC, then 
+1204819.27710843*0.13814902125252*0.00000604 = 1.00532540767 BTC
+Which is higher than what we started with.
+
+The adjacency matrix is correct because for any given A -> B -> A, there is a 
+net loss due to the inherent nature of buying/selling. 
+
+Take DOGE and $$$ for example:
+6.300181338*0.10197139 = 0.10197139*6.300181338 = 0.64243824828 which is a 
+net loss.

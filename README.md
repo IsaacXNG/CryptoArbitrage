@@ -1,4 +1,4 @@
-Negative cycle detection with edge-weighted digraphs. 
+Negative cycle detection with edge-weighted digraphs in order to detect arbitrage opportunities. 
 
 I will clean this up later, but for now modify the code manually to adjust the parameters. 
 Default size is n=25 cryptocurrencies. 

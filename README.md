@@ -6,6 +6,7 @@ Assumptions:
 	We have an infinite supply of currency. 
 The quantity of buy/sell orders for their given prices are infinite. 
 We can find all the arbitrage opportunities and complete all the orders for arbitrage immediately (in other words, we can do everything in 0 time).
+
 Considerations:
 	There is a transaction fee associated with each transaction (0.5% for our selected exchange). 
 	There is a minimum transaction amount. 

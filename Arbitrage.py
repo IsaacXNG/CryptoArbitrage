@@ -1,112 +1,81 @@
 import requests
-import numpy as np
-import pandas as pd
 
-import os
-import json
+transaction_fee = 0.005
+major_currencies = ["DOGE"]
+ignore_currencies = []
 
-n_tuples = 25
-
-if os.path.isfile("markets.json"):
-    with open('markets.json') as input:
-        markets = json.load(input)
-else:
+try:
     markets = requests.get("https://www.cryptopia.co.nz/api/GetMarkets").json()
-    with open('markets.json', 'w') as output:
-        json.dump(markets, output)
+    if not markets["Success"]:
+        exit()
+except:
+    exit()
 
-key_table = {}
-adjacency_matrix = None
 
-for i in markets['Data']:
-    if i["Volume"] > 0:
-        x,y = i["Label"].split("/")
-        if x not in key_table.keys():
-            key_table[x] = len(key_table)
-        if y not in key_table.keys():
-            key_table[y] = len(key_table)
+class graph:
+    """
+    Directed Cyclical Digraph
+    """
+    def __init__(self):
+        self.currencies = {} #dictionary that maps currency name to currency objects
 
-adjacency_matrix = np.zeros((len(key_table),len(key_table)), dtype=float)
+        for i in markets['Data']:
+            if i["Volume"] > 0:
+                coin1, coin2 = i["Label"].split("/")
+                if coin1 in ignore_currencies or coin2 in ignore_currencies:
+                    continue
+                if coin1 not in self.currencies.keys():
+                    self.currencies[coin1] = node(coin1)
+                if coin2 not in self.currencies.keys():
+                    self.currencies[coin2] = node(coin2)
 
-for i in markets['Data']:
-    if i["Volume"] > 0:
-        x,y = i["Label"].split("/")
-        adjacency_matrix[key_table[x]][key_table[y]] = i["BidPrice"]
-        adjacency_matrix[key_table[y]][key_table[x]] = 1/i["AskPrice"]
+                self.currencies[coin1].addChildren(self.currencies[coin2], i["BidPrice"])
+                self.currencies[coin2].addChildren(self.currencies[coin1], 1/i["AskPrice"])
 
-adjacency_matrix = np.array(adjacency_matrix)
-adjacency_matrix = adjacency_matrix[:n_tuples ,:n_tuples ]
+    def __repr__(self):
+        return str(self.currencies)
 
-keys = []
-for item in key_table.keys():
-    keys.append(item)
+class node:
+    def __init__(self, name):
+        self.name = name
+        self.children = {} #dictionary that maps transactions to their price (e.g, if 1 unit of X gives 10 units of Y then we have {Y:10})
 
-#Save adjacency matrix to CSV
-csv = pd.DataFrame(adjacency_matrix)
-csv.columns = keys[:n_tuples]
-csv.index = keys[:n_tuples ]
-csv.to_csv("view.csv")
+    def __repr__(self):
+        return self.name
 
-sample_matrix = np.array([[1, 0.741, 0.657, 1.061, 1.005],
-                        [1.349, 1, 0.888, 1.433, 1.366],
-                        [1.521, 1.126, 1, 1.614, 1.538],
-                        [0.942, 0.698, 0.619, 1, 0.953],
-                         [0.995, 0.732, 0.650, 1.049, 1]])
+    def addChildren(self, newNode, conversion_rate):
+        self.children[newNode] = conversion_rate
 
-cycle_accumulator = []
+    def printChildren(self):
+        print(str(self.children))
+
+accumulator = {}
 
 def find_good_cycles(graph):
-    original = graph.copy()
-    for i in np.arange(graph.shape[0]):
-        for j in np.arange(graph.shape[0]):
-            graph[i][j] = np.log(graph[i][j] + 0.0000000000001)
+    for currency in major_currencies:
+        dfs([graph.currencies[currency]], 1, max_depth = 4)
 
-    dfs(original, graph, 0, [])
+def dfs(visited, conversion_product, max_depth):
+    if(max_depth <= 0):
+        return
+    for nextNode, conversion_rate in visited[-1].children.items():
+        p = (1 - transaction_fee)*conversion_rate*conversion_product
 
-#Depth first search to find cycles where the sum of the logs are greater than zero, getting a net positive yield
-def dfs(original, graph, current_v, visited):
-    if current_v in visited:
-        if len(visited) <= 3:
-            return
-        tally = [current_v]
-        iter = visited.pop()
-        while iter != current_v:
-            tally.append(iter)
-            iter = visited.pop()
-        tally.append(iter)
-        tally.reverse()
-        sum = 0
-        for i in np.arange(len(tally)-1):
-            value = original[tally[i]][tally[i+1]]
-            if value == 0:
-                return
-            else:
-                sum += graph[tally[i]][tally[i+1]]
+        if nextNode in visited:
+            if len(visited) > 3 and visited[0] == nextNode and p > 1:
+                calls += 1
+                accumulator[tuple(visited + [nextNode])] = p
+        else:
+            newVisited = list(visited)
+            newVisited.append(nextNode)
+            dfs(newVisited, p, max_depth - 1)
 
-        if sum > 0 and len(tally) > 3:
-            cycle_accumulator.append((tally, sum))
-    else:
-        visited.append(current_v)
-        for i in np.arange(graph.shape[0]):
-            if original[current_v][i] != 0 and current_v != i:
-                dfs(original, graph, i, list(visited))
+g = graph()
+find_good_cycles(g)
 
-find_good_cycles(adjacency_matrix)
-
-reverse_key_table = {}
-i = 0
-for key in key_table.keys():
-    reverse_key_table[i] = key
-    i += 1
-
-for element in cycle_accumulator:
-    gain_score = element[1]
-    cycle_path = element[0]
-
-    real_names = ""
-    for i in cycle_path:
-        real_names = real_names + " -> " + (reverse_key_table[i])
-    print(cycle_path, real_names, " log-gain-score:", gain_score)
+sorted_list = sorted(accumulator.items(), key=lambda kv: kv[1], reverse=True)
+for item in sorted_list:
+    print(item)
 
 
 

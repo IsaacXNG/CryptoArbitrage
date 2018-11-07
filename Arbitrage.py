@@ -63,7 +63,6 @@ def dfs(visited, conversion_product, max_depth):
 
         if nextNode in visited:
             if len(visited) > 3 and visited[0] == nextNode and p > 1:
-                calls += 1
                 accumulator[tuple(visited + [nextNode])] = p
         else:
             newVisited = list(visited)
